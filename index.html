@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English-Janala</title>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+            <li>
+                <a href=""><button class=""><i class="fa-solid fa-circle-question"></i> FAQ</button></a>
+            </li>
+            <li>
+                <a href=""><button class=""><i class="fa-solid fa-book-open"></i> Book</button></a>
+            </li>
+            <li>
+                <a href=""><button class=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
+            </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">
+            <span>English</span>
+            <img src="./assets/logo.png" alt="">
+            <span>Bangla</span>
+          </a>
+        </div>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+                <a href=""><button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i> FAQ</button></a>
+            </li>
+            <li>
+                <a href=""><button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Book</button></a>
+            </li>
+            <li>
+                <a href=""><button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section>
+            <div class="flex flex-col-reverse md:flex-row justify-between items-center px-5 md:px-20 py-10">
+                <div class="flex text-center md:text-left flex-1 flex-col gap-5">
+                    <h1 class="font-bold text-4xl"><span class="text-blue-400">English</span> is Easy!</h1>
+                    <h2>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</h2>
+                    <input type="text" placeholder="Enter your name" class="input input-neutral" />
+                    <input type="password" placeholder="Enter your password" class="input input-neutral" />
+                    <button class="btn btn-primary w-40">Get Started</button>
+                </div>
+                <div class="flex-1">
+                    <img src="./assets/hero-student.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="my-10">
+            <h1 class="text-3xl font-bold text-center"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
+            <div id="lessonContainer" class="text-center mt-5 flex flex-wrap justify-center gap-3">
+                <!-- Lesson cards will be dynamically inserted here -->
+            </div>
+        </section>
+        <section id="token" class="">
+            <div class="bg-gray-100 text-black text-center p-5 max-w-[90%] mx-auto my-15">
+                <h2 class=" md:text-2xl font-bold mb-4">আপনি এখনো কোন Lesson Select করেন নি</h2>
+                <p class="mb-6">একটি Lesson Select করুন।</p>
+            </div>
+        </section>
+        <section class="bg-amber-100 max-w-[90%] mx-auto">
+
+            <div id="word-container" class="max-w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <!-- Words will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
 </html>
